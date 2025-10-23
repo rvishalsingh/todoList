@@ -1,0 +1,104 @@
+:root{
+  --bg: #0b0c10;
+  --panel: #121419;
+  --text: #e5e7eb;
+  --muted: #aab0bb;
+  --brand: #5ea0ff;
+  --accent: #4ade80;
+  --border: #1f2430;
+  --shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background: linear-gradient(180deg,#0b0c10 0%,#0d1117 100%);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container{width:min(1100px, 92%); margin-inline:auto}
+
+.section{padding:56px 0}
+.section.alt{background: #0e1218}
+
+.hero{
+  padding: 96px 0 72px;
+  background:
+    radial-gradient(1000px 500px at 10% -10%, rgba(94,160,255,.15), transparent 60%),
+    radial-gradient(800px 400px at 110% 10%, rgba(74,222,128,.12), transparent 60%);
+  border-bottom: 1px solid var(--border);
+}
+.eyebrow{color: var(--muted); font-size:.95rem; margin:0 0 8px}
+.hero h1{font-size: clamp(1.75rem, 1.1rem + 2.5vw, 3rem); line-height:1.15; margin:0 0 10px}
+.lede{color:#c9ced6; max-width: 60ch}
+
+.cta-row{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+.btn{
+  display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none;
+  border:1px solid var(--border); color: var(--text); transition:.2s ease all
+}
+.btn.primary{background: var(--brand); color:#08101f; border-color: transparent}
+.btn.ghost:hover{border-color: var(--brand); color: #dfe7ff}
+
+.site-header{
+  position: sticky; top:0; z-index: 1000; backdrop-filter: blur(8px);
+  background: rgba(8, 10, 14, .6); border-bottom: 1px solid var(--border)
+}
+.header-row{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
+.brand{color: #eaf1ff; text-decoration:none; font-weight:700; letter-spacing:.2px}
+
+.nav-toggle{
+  width:42px; height:40px; display:flex; flex-direction:column; gap:6px; align-items:center; justify-content:center;
+  background:transparent; border:1px solid var(--border); border-radius:10px; color:var(--text)
+}
+.nav-toggle .bar{display:block; width:22px; height:2px; background:#dbe7ff}
+
+.nav-menu{display:flex; gap:14px; list-style:none; margin:0; padding:0}
+.nav-menu a{color:#cfe2ff; text-decoration:none; padding:8px 10px; border-radius:8px}
+.nav-menu a:hover{background:#0f1723}
+.nav .active{background:#0f1a2a; color:#eaf1ff}
+
+@media (max-width: 880px){
+  .nav-menu{
+    position: absolute; right: 4%; top: 68px; width: 92%;
+    background: #0d131c; border:1px solid var(--border); border-radius:14px; box-shadow: var(--shadow);
+    display:none; flex-direction:column; padding:10px
+  }
+  .nav-menu.open{display:flex}
+}
+
+.grid.two{display:grid; grid-template-columns: 1.2fr 1fr; gap:22px}
+@media (max-width: 900px){ .grid.two{grid-template-columns:1fr} }
+
+.card{
+  background: var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px
+}
+.card.stats{display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:12px}
+@media (max-width:700px){ .card.stats{grid-template-columns:1fr 1fr} }
+.stat{background:#0b1420; border:1px solid var(--border); padding:12px; border-radius:12px}
+.kpi{display:block; font-weight:800; font-size:1.2rem; color:#d5e4ff}
+.label{display:block; color:var(--muted); font-size:.9rem}
+
+.tag-list{display:flex; gap:8px; flex-wrap:wrap; list-style:none; padding:0; margin:8px 0 0}
+.tag-list li{border:1px solid var(--border); background:#0b1420; padding:6px 10px; border-radius:999px; color:#cfe2ff; font-size:.9rem}
+
+.checklist{list-style: none; padding:0; margin:0}
+.checklist li{padding-left:28px; position:relative; margin:10px 0}
+.checklist li::before{
+  content:"✓"; position:absolute; left:0; top:0; color: var(--accent); background:#0f1723;
+  width:22px; height:22px; line-height:22px; text-align:center; border-radius:6px; border:1px solid var(--border)
+}
+
+.center{text-align:center}
+
+.site-footer{padding:28px 0; border-top:1px solid var(--border); background:#0e1218}
+.footer-row{display:flex; justify-content:space-between; align-items:center}
+.footer-row .top{color:#cfe2ff; text-decoration:none}
+.footer-row .top:hover{color:#fff}
+
+/* Smooth section spacing when using anchors */
+:target{scroll-margin-top: 84px}
