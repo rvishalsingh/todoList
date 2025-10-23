@@ -1,164 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Insurance Form</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at top right, #f0f7ff, transparent 50%),
-                radial-gradient(circle at bottom left, #fff5f7, transparent 50%),
-                #f7f8fb;
-    padding: 20px;
-    color: #101828;
-  }
-  .container {
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-  }
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  form {
-    display: grid;
-    gap: 20px;
-  }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  label {
-    font-size: 14px;
-    margin-bottom: 6px;
-    color: #667085;
-  }
-  input, select, textarea {
-    padding: 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    font-size: 16px;
-    width: 100%;
-  }
-  input:focus, select:focus, textarea:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 3px #eef2ff;
-    outline: none;
-  }
-  button {
-    background: #4f46e5;
-    color: #fff;
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 999px;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #4338ca;
-  }
-  @media (min-width: 600px) {
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-  }
-  .hidden { display: none; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bazaar Gurukul — Big Infra Twist</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div class="container">
-  <h1>Insurance Form</h1>
-  <form id="__vtigerWebForm" name="ManjeetHealthInsure" action="https://orchidresearch.automatecrm.io/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-    <input type="hidden" name="__vtrftk" value="sid:c829fd08fc6c59ff22f627759e94125f089c2730,1755075244">
-    <input type="hidden" name="publicid" value="7f4bcdbd12b541add31c0c0af7c3c686">
-    <input type="hidden" name="urlencodeenable" value="1">
-    <input type="hidden" name="name" value="ManjeetHealthInsure">
-    <input type="hidden" name="leadstatus" value="New">
-    <input type="hidden" name="cf_1926" value="Manjeet Singh">
-
-    <div class="form-group">
-      <label for="lastname">Full Name*</label>
-      <input type="text" id="lastname" name="lastname" required>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#home" aria-label="Bazaar Gurukul Home">Bazaar Gurukul</a>
+      <nav class="nav" aria-label="Primary">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="navMenu" class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#development">Big Development</a></li>
+          <li><a href="#impact">Market Impact</a></li>
+          <li><a href="#india">Why It Matters</a></li>
+          <li><a href="#trends">Trends</a></li>
+          <li><a href="#investor">Investor Angle</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="grid-2">
-      <div class="form-group">
-        <label for="email">Primary Email*</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Primary Phone*</label>
-        <input type="text" id="phone" name="phone" required>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="cf_1513">Gender*</label>
-      <select id="cf_1513" name="cf_1513" required>
-        <option value="">Select Value</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Transgender">Transgender</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="description">Description</label>
-      <textarea id="description" name="description"></textarea>
-    </div>
-
-    <div class="grid-2">
-      <div class="form-group">
-        <label for="cf_1924">Type of Insurance</label>
-        <select id="cf_1924" name="cf_1924">
-          <option value="">Select Value</option>
-          <option value="Motor">Motor</option>
-          <option value="Life">Life</option>
-          <option value="Health">Health</option>
-          <option value="General">General</option>
-        </select>
-      </div>
-      <div class="form-group hidden" id="policyTypeGroup">
-        <label for="cf_1922">Policy Type</label>
-        <select id="cf_1922" name="cf_1922">
-          <option value="">Select Value</option>
-          <option value="Individual">Individual</option>
-          <option value="Family">Family</option>
-        </select>
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container">
+      <p class="eyebrow">23 October 2025 • Presented by Vishal Singh</p>
+      <h1>Big Infra Twist... Are You Ready for What's Coming?</h1>
+      <p class="lede">Fresh contract wins and evolving infra trends shaping the cycle for EPC leaders.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://t.me/orchid_research">Explore</a>
+        <a class="btn ghost" href="#about">About the Company</a>
       </div>
     </div>
+  </main>
 
-    <div class="form-group">
-      <label for="cf_1920">Address</label>
-      <input type="text" id="cf_1920" name="cf_1920">
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container grid two">
+      <div>
+        <h2>About the Company</h2>
+        <p>
+          Kalpataru Projects International Limited (KPIL), formerly Kalpataru Power Transmission Limited, is one of India’s biggest EPC powerhouses with expertise across power, buildings, railways, water, pipelines, highways, and airports. 
+        </p>
+        <p>
+          KPIL has executed projects across 30+ countries and has a footprint in 75 nations, underscoring diversified capabilities and global reach.
+        </p>
+      </div>
+      <aside class="card">
+        <h3>Project associations</h3>
+        <ul class="tag-list">
+          <li>UPMRC</li>
+          <li>Gülermak</li>
+          <li>KPIL–Gülermak JV</li>
+          <li>KNPCC‑11</li>
+          <li>Herrenknecht</li>
+        </ul>
+      </aside>
     </div>
+  </section>
 
-    <button type="submit">Submit</button>
-  </form>
-</div>
-<script>
-  const typeSelect = document.getElementById('cf_1924');
-  const policyGroup = document.getElementById('policyTypeGroup');
-  typeSelect.addEventListener('change', () => {
-    if (typeSelect.value === 'Health') {
-      policyGroup.classList.remove('hidden');
-    } else {
-      policyGroup.classList.add('hidden');
-      document.getElementById('cf_1922').value = '';
-    }
-  });
-</script>
+  <!-- Big Development -->
+  <section id="development" class="section alt">
+    <div class="container grid two">
+      <div>
+        <h2>The Big Development</h2>
+        <p>
+          On 23 October 2025, KPIL announced major fresh contracts across two areas: Global Power Transmission & Distribution and Domestic Buildings & Factories.
+        </p>
+        <p>
+          The orders together are valued in thousands of crores and lift FY26 inflows to nearly ₹15,000 crore, marking about 25% growth year over year.
+        </p>
+      </div>
+      <aside class="card stats">
+        <div class="stat"><span class="kpi">₹15,000 cr</span><span class="label">FY26 order inflow</span></div>
+        <div class="stat"><span class="kpi">+25%</span><span class="label">YoY growth</span></div>
+        <div class="stat"><span class="kpi">Global + Domestic</span><span class="label">T&D and B&F</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Market Impact -->
+  <section id="impact" class="section">
+    <div class="container">
+      <h2>Impact on the Market</h2>
+      <p>
+        The wins underscore strong demand across global T&amp;D and India’s infrastructure cycle, with the Buildings &amp; Factories segment pointing to expanding industrial and commercial activity.
+      </p>
+      <p>
+        The stock opened at ₹1,284 and traded between ₹1,252–₹1,284 versus the previous close of ₹1,269.70, suggesting investors already price in strength in the order book and broader infra sentiment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section id="india" class="section alt">
+    <div class="container">
+      <h2>Why It Matters for India</h2>
+      <p>
+        Large inflows highlight a booming infrastructure and power cycle, signaling continued momentum in core sectors.
+      </p>
+      <p>
+        Rising Buildings &amp; Factories demand reflects manufacturing and commercial expansion, potentially boosting jobs, capital flows, and investor sentiment in infra‑linked names.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trends -->
+  <section id="trends" class="section">
+    <div class="container grid two">
+      <div>
+        <h2>Trends Shaping the Sector</h2>
+        <ul class="checklist">
+          <li>Heavy public capex combined with rising private investments</li>
+          <li>Global energy demand driving cross‑border transmission projects</li>
+          <li>Sustainability and digital technologies as key execution levers</li>
+        </ul>
+      </div>
+      <aside class="card note">
+        <p>
+          Execution discipline and tech‑enabled delivery are emerging as differentiators for EPC leaders through the cycle.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Investor Angle -->
+  <section id="investor" class="section alt">
+    <div class="container">
+      <h2>Investor Angle</h2>
+      <p>
+        Order wins are positive, but outcomes depend on execution, profitability, and overseas risk management across diverse geographies.
+      </p>
+      <p>
+        A strong pipeline exists, yet delivery discipline and margin quality will likely define long‑term winners.
+      </p>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="section">
+    <div class="container center">
+      <h2>Get the PDF</h2>
+      <p>Download the full deck used to build this page.</p>
+      <a class="btn primary" href="Studio-Shodwe.pdf" download>Download PDF</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>&copy; 2025 Bazaar Gurukul</span>
+      <a class="top" href="#home" aria-label="Back to top">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
